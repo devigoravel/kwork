@@ -1,0 +1,848 @@
+// подключение шрифтов начало
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+// подключение шрифтов конец
+
+// общие настройки начало
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+// переменные начало
+$crimson: crimson;
+$black: #222;
+$white: #ffffff;
+$light-color: #666;
+$light-bg: #f3f3f3;
+$border: 0.1rem solid rgba(0, 0, 0, 0.1);
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+// переменные конец
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+// сетка
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  background: $crimson;
+  color: $white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  &:hover {
+    background: $black;
+  }
+}
+
+.btn-tabs {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  background: $crimson;
+  color: $white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-radius: 3rem;
+  &.active-tab {
+    background: $black;
+  }
+
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+// общие настройки конец
+
+// секция шапка начало
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: $white;
+  box-shadow: $box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  width: 100%;
+  // логотип
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+    i {
+      color: $crimson;
+      padding: .5rem;
+    }
+  }
+  // меню
+  .navbar {
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        margin-right: 2.5rem;
+        &:last-child {
+          margin: 0;
+        }
+        a {
+          font-size: 1.8rem;
+          color: $crimson;
+          font-weight: bold;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            height: 0.1875rem;
+            width: 0;
+            background: $black;
+            transition: width 0.7s linear;
+          }
+          &:hover::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  // иконки
+  .icons div {
+    font-size: 2.5rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
+    color: $black;
+    &:hover {
+      color: $crimson;
+    }
+  }
+  // форма поиска
+  .search-form {
+    position: absolute;
+    top: 115%;
+    left: -115%;
+    transform: translate(-50%);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    box-shadow: $box-shadow;
+    background: $white;
+    transition: left 0.9s linear;
+    &.active {
+      left: 50%;
+      transform: translate(-50%);
+    }
+    input {
+      height: 100%;
+      width: 100%;
+      padding: 0 1.5rem;
+      font-size: 1.6rem;
+      color: $black;
+      text-transform: none;
+    }
+    label {
+      font-size: 2.5rem;
+      margin-right: 1.7rem;
+      cursor: pointer;
+      color: $black;
+      &:hover {
+        color: $crimson;
+      }
+    }
+  }
+  // форма корзины начало
+  .shopping-cart {
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    background: $white;
+    box-shadow: $box-shadow;
+    width: 50rem;
+    padding: 2rem;
+    text-align: center;
+    transition: 0.5s linear;
+    &.active {
+      right: 2rem;
+      transition: 0.5s linear;
+    }
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      position: relative;
+      .fa-times {
+        flex: 1 1 10%;
+        // position: absolute;
+        // top: 50%;
+        // right: 32px;
+        // transform: translateY(-50%);
+        font-size: 2rem;
+        color: $black;
+        cursor: pointer;
+        &:hover {
+          color: $crimson;
+        }
+      }
+      .image {
+        flex: 1 1 50%;
+        text-align: center;
+        img {
+          height: 10rem;
+        }
+      }
+      .content {
+        flex: 1 1 40%;
+        padding-bottom: 0.5rem;
+        color: $black;
+        span {
+          font-size: 1.5rem;
+          color: $black;
+          .multiply {
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+    .total {
+      color: $black;
+      text-align: center;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      span {
+        color: $crimson;
+      }
+    }
+  }
+  // форма корзины конец
+  .btn {
+    text-align: center;
+    width: 60%;
+    border-radius: 1rem;
+  }
+  // форма регистрации начало
+  .login-form {
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    width: 35rem;
+    height: 35rem;
+    background: $white;
+    box-shadow: $box-shadow;
+    padding: 2rem;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transition: 0.8s linear;
+    h3 {
+      color: $black;
+      text-transform: uppercase;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0.7rem;
+    }
+    .box {
+      margin: 11.2px 0;
+      border: $border;
+      padding: 1rem 1.2rem;
+      font-size: 1.5rem;
+      color: $black;
+      text-transform: none;
+      width: 100%;
+    }
+    NaNpxember {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.7rem 0;
+      label {
+        font-size: 1.5rem;
+        color: $black;
+        cursor: pointer;
+      }
+    }
+    .btn {
+      margin: 1rem 0;
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      color: $black;
+      padding-top: 0.7rem;
+      font-size: 1.4rem;
+      a {
+        color: $crimson;
+      }
+      button {
+        background: none;
+        color: $crimson;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &.active {
+      right: 2rem;
+    }
+  }
+  // форма регистрации конец
+}
+#menu-btn {
+  display: none;
+}
+// секция шапка конец
+
+// блок анимации начало
+@keyframes fadeIn {
+  0% {
+    transform: translateY(64px);
+    opacity: 0;
+  }
+}
+
+// блок анимации конец
+
+// секция домашняя страница начало
+.home {
+  padding: 0;
+  position: relative;
+  .slide {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem 9%;
+    background-size: cover !important;
+    background-position: center !important;
+    display: none;
+    &.active {
+      display: flex;
+    }
+    .content {
+      span {
+        color: $crimson;
+        display: block;
+        font-size: 7rem;
+        animation: fadeIn 0.4s linear 0.2s backwards;
+      }
+      h3 {
+        color: $crimson;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-size: 4rem;
+        animation: fadeIn 0.4s linear 0.4s backwards;
+      }
+      .btn {
+        animation: fadeIn 0.4s linear 0.6s backwards;
+        border-radius: 1rem;
+      }
+    }
+  }
+  #next-slide,
+  #prev-slide {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-50%);
+    right: -105%;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    line-height: 5.5rem;
+    font-size: 4rem;
+    color: $crimson;
+    background: $black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s linear;
+    &:hover {
+      background: $white;
+      border: 0.0625rem solid $black;
+    }
+  }
+  #prev-slide {
+    left: -105%;
+  }
+  &:hover {
+    #prev-slide {
+      left: 2rem;
+    }
+    #next-slide {
+      right: 2rem;
+    }
+  }
+}
+// секция домашняя страница конец
+
+// секция лидеры продаж начало
+.sales-leaders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .sales-leaders-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $crimson;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .sofas, .bedroom, .kitchen-set, .content-tab {
+    @include grid(30rem);
+    // display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    display: none;
+    &.active-tab {
+      display: flex;
+    }
+    .box {
+      width: 30rem;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      .effect {
+        display: inline-block;
+        position: absolute;
+        &:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to right, transparent, $crimson);
+          animation: topRun 2s linear infinite forwards;
+      }
+      
+      @keyframes topRun {
+          0% {
+              left: -100%;
+          }
+          50%, 100% {
+              left: 100%;
+          }
+      }
+      
+      &:nth-child(2) {
+          right: 0;
+          top: -100%;
+          height: 100%;
+          width: 1px;
+          background: linear-gradient(to bottom, transparent, $crimson);
+          animation: rightRun 2s linear infinite forwards;
+          animation-delay: 0.5s;
+      }
+      
+      @keyframes rightRun {
+          0% {
+              top: -100%;
+          }
+          50%, 100% {
+              top: 100%;
+          }
+      }
+      
+      &:nth-child(3) {
+          bottom: 0;
+          left: 100%;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to left, transparent, $crimson);
+          animation: bottomRun 2s linear infinite forwards;
+          animation-delay: 1s;
+      }
+      
+      @keyframes bottomRun {
+          0% {
+              left: 100%;
+          }
+          50%, 100% {
+              left: -100%;
+          }
+      }
+      
+      &:nth-child(4) {
+          left: 0;
+          top: 100%;
+          height: 100%;
+          width: 1px;
+          background: linear-gradient(to top, transparent, $crimson);
+          animation: leftRun 2s linear infinite forwards;
+          animation-delay: 1.5s;
+      }
+      
+      @keyframes leftRun {
+          0% {
+              top: 100%;
+          }
+          50%, 100% {
+              top: -100%;
+          }
+      }
+      }
+      &:hover {
+        box-shadow: $box-shadow;
+        .effect {
+          display: none;
+        }
+      }
+      .images {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          .dimensions {
+            top: 0;
+          }
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        .dimensions {
+          position: absolute;
+          top: -115%;
+          left: 0;
+          background: rgba(255, 255, 255, 0.9);
+          width: 100%;
+          height: 100%;
+          border: 1px solid $crimson;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: top 0.4s linear;
+          .title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 1rem 0;
+          }
+          .box-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding-top: 1.5rem;
+            .width {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              position: relative;
+              &::before {
+                content: 'x';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -2rem;
+                font-size: 1.5rem;
+              }
+              span {
+                font-size: 1.7rem;
+              }
+            }
+            .depth {
+              display: flex;
+              flex-direction: column;
+              position: relative;
+              &::before {
+                content: 'x';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -2rem;
+                font-size: 1.5rem;
+              }
+              span {
+                font-size: 1.7rem;
+              }
+            }
+            .hight {
+              display: flex;
+              flex-direction: column;
+              span {
+                font-size: 1.7rem;
+              }
+            }
+          }
+        }
+      }
+      .content {
+        .title {
+          span {
+            font-size: 1.5rem;
+            color: #959991;
+          }
+          h4 {
+            font-size: 1.7rem;
+            font-weight: 400;
+          }
+        }
+        .price {
+          margin-top: 1rem;
+          display: flex;
+          flex-direction: column;
+          span {
+            font-size: 1.4rem;
+            text-decoration:line-through;
+            &:last-child {
+              font-size: 2rem;
+              color: $crimson;
+              text-decoration:none;
+            }
+          }
+        }
+        .icons {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: space-between;
+          font-size: 2.7rem;
+          .favorites {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: $border;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              i {
+                color: $crimson;
+              }
+            }
+            i {
+              color: $black;
+            }
+          }
+          .cart {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: $border;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              i {
+                color: $crimson;
+              }
+            }
+            i {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// секция лидеры продаж конец
+
+// секция футер начало
+.footer {
+  background: $black;
+  .box-container {
+    @include grid(25rem);
+    display: flex;
+    justify-content: space-between;
+    .box {
+      h3 {
+        font-size: 2.2rem;
+        color: $white;
+        padding: 1rem 0;
+      }
+      p {
+        font-size: 1.5rem;
+        color: $white;
+        padding-bottom: 0.5rem;
+      }
+      a {
+        font-size: 1.4rem;
+        color: $white;
+        padding: 1rem 0;
+        display: block;
+        &:hover {
+          i {
+            padding-right: 32px;
+          }
+        }
+      }
+      i {
+        padding-right: 0.5rem;
+        color: $crimson;
+      }
+      form {
+        input {
+          width: 100%;
+          padding: 1rem 1.2rem;
+          border-radius: 0.625rem;
+          font-size: 1.6rem;
+          color: $black;
+          margin: 1rem 0;
+          text-transform: none;
+        }
+        .btn {
+          border-radius: 0.625rem;
+          font-weight: bold;
+          &:hover {
+            color: $black;
+            background: $crimson;
+          }
+        }
+      }
+      .payment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+          i {
+            font-size: 4rem;
+            padding-right: 0;
+          }
+          &:hover {
+            transform: scale(1.2);
+            transition: all 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+}
+// секция футер конец
+
+// медиа запросы начало
+@media (max-width: 991px) {
+  html {
+    overflow-x: hidden;
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  .footer {
+    .box-container {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header {
+    .shopping-cart {
+      width: 90%;
+    }
+    .login-form {
+      width: 60%;
+    }
+    .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: $white;
+      border-top: $border;
+      border-bottom: $border;
+      clip-path: polygon((0 0, 100% 0, 100% 0, 0 0));
+      &.active {
+        clip-path: polygon((0 0, 100% 0, 100% 100%, 0 100%));
+      }
+      ul {
+        display: block;
+        li {
+          margin: 1.5rem;
+          padding: 2rem;
+          background: $crimson;
+          &:last-child {
+            margin: 1.5rem;
+          }
+          a {
+            font-size: 2.5rem;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 481px) {
+  .header {
+    padding: 0;
+    flex-direction: column;
+    .logo {
+      margin-bottom: 1.5rem;
+    }
+    .icons {
+      margin-bottom: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      div {
+        margin: 0;
+      }
+    }
+    .login-form {
+      width: 90%;
+    }
+  }
+  .sales-leaders {
+    width: 100%;
+    .sales-leaders-tabs {
+      .btn-tabs {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+      }
+    }
+    .content-tab {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    .shopping-cart {
+      .box {
+        .btn {
+          width: 90%;
+        }
+      }
+    }
+    .login-form {
+      width: 90%;
+    }
+  }
+}
+
+// медиа запросы конец

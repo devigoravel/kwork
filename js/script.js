@@ -69,3 +69,33 @@ menuTabs.addEventListener("click", function(e){
         menuSection.querySelector(target).classList.add("active-tab");
     }
 });
+
+// подключение swiper слайдера
+const swiper = new Swiper('.swiper', {
+  breakpoints: {
+    // when window width is >= 480px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+});
+

@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>home</title>
+    <!-- подключение файла стилей слайдера swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
 
     <!-- подключение файла Font Awesome через CDN   -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
     <!-- подключение файла стилей css  -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -106,7 +110,10 @@
 
     <!-- секция домашняя страница начало -->
     <section class="home">
-      <div class="slide active"style="background: url(./my-img/slider-home/corner-sofa.jpg) no-repeat">
+      <div
+        class="slide active"
+        style="background: url(./my-img/slider-home/corner-sofa.jpg) no-repeat"
+      >
         <div class="content">
           <span>диваны</span>
           <h3>скидка до 30%</h3>
@@ -140,41 +147,47 @@
 
     <!-- секция лидеры продаж начало -->
     <section class="sales-leaders">
-      <h3>лидеры продаж</h3>
+      <h3 class="heading">лидеры продаж</h3>
       <div class="sales-leaders-tabs">
-        <button type="button" class="btn-tabs active-tab" data-target="#sofas">Диваны</button>
-        <button type="button" class="btn-tabs" data-target="#bedroom">Спальные гарнитуры</button>
-        <button type="button" class="btn-tabs" data-target="#kitchen">Кухонные гарнитуры</button>
+        <button type="button" class="btn-tabs active-tab" data-target="#sofas">
+          Диваны
+        </button>
+        <button type="button" class="btn-tabs" data-target="#bedroom">
+          Спальные гарнитуры
+        </button>
+        <button type="button" class="btn-tabs" data-target="#kitchen">
+          Кухонные гарнитуры
+        </button>
         <!-- <button type="button" class="btn-tabs" data-target="#living-room" >Гарнитуры для гостинной</button> -->
       </div>
       <div class="sofas content-tab active-tab" id="sofas">
-        <div class="box ">
+        <div class="box">
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/sofa/sofa-1.jpg" alt="sofa-1" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-1.jpg" alt="sofa-1" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Диван</span>
@@ -199,28 +212,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/sofa/sofa-2.jpg" alt="sofa-2" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-2.jpg" alt="sofa-2" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Диван</span>
@@ -245,28 +258,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/sofa/sofa-3.jpg" alt="sofa-3" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-3.jpg" alt="sofa-3" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Диван</span>
@@ -291,28 +304,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/sofa/sofa-4.jpg" alt="sofa-4" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-4.jpg" alt="sofa-4" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Диван</span>
@@ -337,28 +350,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/sofa/sofa-5.jpg" alt="sofa-5" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-5.jpg" alt="sofa-5" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Диван</span>
@@ -383,28 +396,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/sofa/sofa-6.jpg" alt="sofa-6" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-6.jpg" alt="sofa-6" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Диван</span>
@@ -431,28 +444,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/bedroom/img-1.jpg" alt="sofa-1" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bedroom/img-1.jpg" alt="sofa-1" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Спальный гарнитур</span>
@@ -477,28 +490,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/bedroom/img-2.jpg" alt="sofa-2" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bedroom/img-2.jpg" alt="sofa-2" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Спальный гарнитур</span>
@@ -523,28 +536,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/bedroom/img-3.jpg" alt="sofa-3" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bedroom/img-3.jpg" alt="sofa-3" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Спальный гарнитур</span>
@@ -569,28 +582,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/bedroom/img-4.jpg" alt="sofa-4" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bedroom/img-4.jpg" alt="sofa-4" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Спальный гарнитур</span>
@@ -615,28 +628,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/bedroom/img-5.jpg" alt="sofa-5" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bedroom/img-5.jpg" alt="sofa-5" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Спальный гарнитур</span>
@@ -661,28 +674,28 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/bedroom/img-6.jpg" alt="sofa-6" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bedroom/img-6.jpg" alt="sofa-6" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Спальный гарнитур</span>
@@ -709,28 +722,31 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/kitchen-set/img-1.jpg" alt="sofa-1" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-1.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Кухонный гарнитур</span>
@@ -755,28 +771,31 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/kitchen-set/img-2.jpg" alt="sofa-2" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-2.jpg"
+              alt="sofa-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Кухонный гарнитур</span>
@@ -801,28 +820,31 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/kitchen-set/img-3.jpg" alt="sofa-3" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-3.jpg"
+              alt="sofa-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Кухонный гарнитур</span>
@@ -847,28 +869,31 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/kitchen-set/img-4.jpg" alt="sofa-4" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-4.jpg"
+              alt="sofa-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Кухонный гарнитур</span>
@@ -893,28 +918,31 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/kitchen-set/img-5.jpg" alt="sofa-5" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-5.jpg"
+              alt="sofa-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Кухонный гарнитур</span>
@@ -939,28 +967,31 @@
           <span class="effect"></span>
           <span class="effect"></span>
           <span class="effect"></span>
-            <div class="images">
-                <img src="./my-img/sales-leaders/kitchen-set/img-6.jpg" alt="sofa-6" />
-                <div class="dimensions">
-                  <div class="title">
-                    <h4>размеры</h4>
-                  </div>
-                  <div class="box-container">
-                    <div class="width">
-                      <span>ширина</span>
-                      <span>216 см</span>
-                    </div>
-                    <div class="depth">
-                      <span>глубина</span>
-                      <span>158 см</span>
-                    </div>
-                    <div class="hight">
-                      <span>высота</span>
-                      <span>76 см</span>
-                    </div>
-                  </div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-6.jpg"
+              alt="sofa-6"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
                 </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
             </div>
+          </div>
           <div class="content">
             <div class="title">
               <span>Кухонный гарнитур</span>
@@ -983,7 +1014,229 @@
       </div>
     </section>
     <!-- секция лидеры продаж конец -->
-
+    <!-- секция преимущества начало -->
+    <section class="benefits">
+      <h3 class="heading">Наши преимущества</h3>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="./my-img/benefits/img-6.svg" alt="img-6" />
+          </div>
+          <div class="content">
+            <h3>Мебель высокого качества!</h3>
+            <p>
+              Все товары из нашего ассортимента производятся только на
+              высокотехнологичном и современном оборудовании с ЧПУ итальянской и
+              немецкой марок (Holz-Her, IMA, Homag). Благодаря тщательному
+              контролю всех этапов производства, использованию надёжной
+              фурнитуры и материалов, мы можем обеспечить высокое качество
+              изделий и низкие цены.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./my-img/benefits/img-2.svg" alt="img-2" />
+          </div>
+          <div class="content">
+            <h3>Сборка на месте!</h3>
+            <p>
+              Вы всегда можете доверить сборку нашим специалистам, услугу можно
+              заказать при оформлении товара. Профессиональные сборщики быстро и
+              легко соберут даже самую сложную конструкцию, а вы всегда будете
+              уверены в результате.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./my-img/benefits/img-1.svg" alt="img-1" />
+          </div>
+          <div class="content">
+            <h3>Бесплатная доставка!</h3>
+            <p>
+              Мы предлагаем быструю и полностью бесплатную доставку с фабрики
+              производителя по Москве до вашего подъезда.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./my-img/benefits/img-3.svg" alt="img-3" />
+          </div>
+          <div class="content">
+            <h3>Широкий ассортимент!</h3>
+            <p>
+              Наш каталог мебели насчитывает более 30000 моделей, от тумб и
+              кроватей до диванов и кресел, а разнообразие стилевых и цветовых
+              решений поможет подобрать изделие для любого интерьера. Посмотреть
+              и оценить качество выбранного товара перед покупкой вы всегда
+              можете в наших шоу-румах.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./my-img/benefits/img-4.svg" alt="img-4" />
+          </div>
+          <div class="content">
+            <h3>Низкие цены!</h3>
+            <p>
+              В нашем интернет-магазине представлены модели собственного
+              производства. Благодаря этому мы можем гарантировать низкие цены
+              на качественные изделия по индивидуальным размерам.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./my-img/benefits/img-5.svg" alt="img-5" />
+          </div>
+          <div class="content">
+            <h3>Выгодные скидки!</h3>
+            <p>
+              В нашем магазине регулярно проходят распродажи и акции, которые
+              помогут вам приобрести мебель со скидкой до 90%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- секция преимущества конец -->
+    <!-- секция полезные статьи начало -->
+    <section class="useful-articles">
+      <h3 class="heading">Полезные статьи</h3>
+      <!-- глаавный контейнер слайдера начало -->
+      <div class="swiper">
+        <!-- обязательная оболочка начало -->
+        <div class="swiper-wrapper">
+          <!-- сами слайды начало -->
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-1.jpg" alt="img-1" />
+            </div>
+            <div class="content">
+              <h4>10 важных задач перед открытием дачного сезона</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-2.jpg" alt="img-2" />
+            </div>
+            <div class="content">
+              <h4>Как выбрать искусственную елку на Новый год?</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-3.png" alt="img-3" />
+            </div>
+            <div class="content">
+              <h4>Что принято дарить близким на Новый год?</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-4.jpg" alt="img-3" />
+            </div>
+            <div class="content">
+              <h4>Как создать дома новогоднюю атмосферу?</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-5.jpg" alt="img-5" />
+            </div>
+            <div class="content">
+              <h4>Преимущества и недостатки покупок мебели через интернет</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-6.jpg" alt="img-6" />
+            </div>
+            <div class="content">
+              <h4>Как сэкономить место в детской комнате?</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-7.jpg" alt="img-7" />
+            </div>
+            <div class="content">
+              <h4>Как подобрать матрас для ребенка</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-8.jpg" alt="img-8" />
+            </div>
+            <div class="content">
+              <h4>Как создать детскую комнату для учебы</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/useful-articles/img-9.jpg" alt="img-9" />
+            </div>
+            <div class="content">
+              <h4>Как обустроить свою дачу</h4>
+            </div>
+            <div class="icons">
+              <span><i class="fas fa-clock"></i> 16.01.2020</span>
+              <span><i class="fas fa-user"></i> Сергей</span>
+            </div>
+          </div>
+          <!-- сами слайды конец -->
+        </div>
+        <!-- обязательная оболочка конец -->
+        <!-- добовляем стрелки управления -->
+        <div class="swiper-button-prev">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <!-- добовляем пагинацию -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- добовляем полоску прокрутки -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+      <!-- глаавный контейнер слайдера конец -->
+      <!-- секция полезные статьи конец -->
+    </section>
     <!-- секция футер начало -->
     <section class="footer">
       <div class="box-container">
@@ -1028,6 +1281,8 @@
     </section>
     <!-- секция футер конец -->
 
+    <!-- подключение файла js для слайдера swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- custom css file link  -->
     <script src="js/script.js"></script>
   </body>

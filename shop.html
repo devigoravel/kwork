@@ -1,24 +1,3454 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>shop</title>
+    <!-- подключение файла стилей слайдера swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
+    <!-- подключение файла стилей css  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- секция шапка начало  -->
+    <header class="header">
+      <a href="home.html" class="logo"><i class="fas fa-bed"></i>Будуар</a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="home.html">Главная</a></li>
+          <li><a href="shop.html">Магазин</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="review.html">Отзывы</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+
+      <!-- форма для поиска -->
+      <form action="" class="search-form">
+        <input id="search-box" type="search" placeholder="поиск товара..." />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <!-- форма корзины -->
+      <div class="shopping-cart">
+        <div class="box">
+          <div class="image">
+            <img
+              class="image"
+              src="./my-img/shopping-cart/furniture-set.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>мебельный гарнитур</h3>
+            <span class="quantity">1</span>
+            <span class="multiply">x</span>
+            <span class="price">4500 руб.</span>
+          </div>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img class="image" src="./my-img/shopping-cart/chair.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Стул</h3>
+            <span class="quantity">1</span>
+            <span class="multiply">x</span>
+            <span class="price">4500 руб.</span>
+          </div>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img class="image" src="./my-img/shopping-cart/sofa.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>диван</h3>
+            <span class="quantity">1</span>
+            <span class="multiply">x</span>
+            <span class="price">4500 руб.</span>
+          </div>
+          <i class="fas fa-times"></i>
+        </div>
+        <h3 class="total">итого : <span>56.97 руб.</span></h3>
+        <a href="#" class="btn">оплатить товар</a>
+      </div>
+      <!-- форма авторизации -->
+      <form action="" class="login-form">
+        <h3>Авторизация клиента</h3>
+        <input type="email" placeholder="Введите свой email" class="box" />
+        <input type="password" placeholder="Введите свой пароль" class="box" />
+        <div class="remember">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">запомнить данные</label>
+        </div>
+        <input type="submit" value="авторизация" class="btn" />
+        <p>забыли пароль? <a href="#">кликните здесь</a></p>
+        <p>
+          еще не зарегистрированы <button id="login">кликните здесь</button>
+        </p>
+      </form>
+    </header>
+    <!-- секция шапка конец -->
+    <!-- секция home начало -->
+    <div
+      class="home-section"
+      style="background-image: url(../my-img/category/shop-home.jpg)"
+    >
+      <div class="darken"></div>
+      <div class="content">
+        <h1>наш магазин</h1>
+        <p>
+          <a href="#"
+            >Главная <span><i class="fas fa-arrow-right"></i></span
+          ></a>
+          магазин
+        </p>
+      </div>
+    </div>
+    <!-- секция home конец -->
+
+    <!-- секция категория начало -->
+    <section class="category">
+      <h3 class="heading">категории</h3>
+      <div class="swiper category-slider">
+        <div class="swiper-wrapper category-tabs">
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/sofas.svg" alt="sofas" />
+            </div>
+            <div class="title-up">
+              <span>диваны</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button
+                type="button"
+                class="btn active-tab"
+                data-target="#sofas-category"
+              >
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/kitchen.svg" alt="kitchen" />
+            </div>
+            <div class="title-up">
+              <span>кухни</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#kitchen">
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/dressers.svg" alt="dressers" />
+            </div>
+            <div class="title-up">
+              <span>комоды</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#dressers">
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/bed.svg" alt="bed" />
+            </div>
+            <div class="title-up">
+              <span>кровати</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#beds">
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/child-room.svg" alt="child-room" />
+            </div>
+            <div class="title-up">
+              <span>детские</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#child-room">
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/hallway.svg" alt="hallway" />
+            </div>
+            <div class="title-up">
+              <span>прихожие</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#hallway">
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img
+                src="./my-img/category/household-products.svg"
+                alt="household-products"
+              />
+            </div>
+            <div class="title-up">
+              <span>товары для дома</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button
+                type="button"
+                class="btn"
+                data-target="#household-products"
+              >
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/living-room.svg" alt="living-room" />
+            </div>
+            <div class="title-up">
+              <span>мебель для гостинной</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#living-room">
+                перейти
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image">
+              <img src="./my-img/category/tables.svg" alt="tables" />
+            </div>
+            <div class="title-up">
+              <span>столы</span>
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="title-down">
+              <i class="fas fa-arrow-down"></i>
+              <button type="button" class="btn" data-target="#tables">
+                перейти
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="sofas content-tab active-tab" id="sofas-category">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-1.jpg" alt="sofa-1" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Диван</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-2.jpg" alt="sofa-2" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Диван</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-3.jpg" alt="sofa-3" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Диван</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-4.jpg" alt="sofa-4" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Диван</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-5.jpg" alt="sofa-5" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Диван</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/sofa/sofa-6.jpg" alt="sofa-6" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Диван</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-sofas">
+          <h2>Правила выбора угловых диванов</h2>
+          <div class="text-sofas">
+            <p>
+              Говорят, что угловой диван придумали, чтобы эффективно
+              использовать пространство в углу комнаты. Но есть подозрения, что
+              придуман он затем, чтобы большая семья могла собраться вместе,
+              обсудить домашние и личные дела, посмотреть телевизор, отдохнуть.
+              И с первой, и со второй миссией угловой диван справляется на
+              отлично. Мы решили рассказать вам о том, как найти идеальный
+              вариант углового дивана для установки в гостиной или кухне с
+              обеденной зоной, обустроенной мягкой частью. Искренне надеемся,
+              что эти советы помогут вам отыскать во всех отношениях удобную
+              мебель.
+            </p>
+            <h2>Выбираем размер и расположение угла</h2>
+            <p>
+              Измерьте место, где собираетесь поставить угловой диван, и
+              накиньте еще по 10-20 см с каждой стороны. Это нужно, чтобы во
+              время установки мебель идеально подошла по размерам комнаты. И
+              напротив, если купить угол, но не угадать с габаритами, придется
+              все время цепляться за надоедливый уголок или двигать весь
+              остальной гарнитур, чтобы оптимально подогнать предметы друг к
+              другу. Угол может быть левым или правым, и этот момент даже
+              важнее, чем размеры. Определитесь, с какой стороны должна
+              располагаться угловая часть, чтобы не получилось как в стишке:
+              «хвостик некуда девать». А если места в доме хватает, например,
+              остается свободной целая стена и два незанятых угла на кухне,
+              совмещенной с гостиной, вот тогда есть смысл заказать П-образную
+              модель. Такая красиво заполнит собой пространство от стены до
+              стены. Тогда и со стороной расположения угла - никаких проблем.
+            </p>
+            <h2>Механизм раскладки</h2>
+            <p>
+              Система трансформации спального места определяет легкость и
+              удобство раскладки. В каталоге «Будуар» собраны модульные
+              угловые диваны, еврокнижки, пантографы, дельфины и другие удобные
+              механизмы трансформации.
+            </p>
+            <h2>Ортопедическое сидение и спинка</h2>
+            <p>
+              В магазине "Будуар" можно купить только угловые диваны с
+              ортопедическим основанием. Внутри мягкой мебели от производителя
+              «Софос» стоит надежный пружинный блок Боннель с прослойкой
+              ортопены, и потому матрас обеспечивает качественную поддержку для
+              спины, не прогибается в отдельных местах и остается идеально
+              ровным даже после многих лет эксплуатации.
+            </p>
+            <h2>Легкий способ подружить дизайн интерьера и Г-образный диван</h2>
+            <p>
+              Как мебель потом будет выглядеть в интерьере - вопрос важный. Ему
+              там лет 7-10 стоять, как минимум, потому он должен удачно
+              сочетаться с цветом стен, потолков и дизайном другой мебели в
+              доме. Мы решили не усложнять и просто подобрали универсальные
+              варианты с однотонными обивками в сдержанных тонах. Это
+              элементарный способ достичь гармонии между всеми элементами
+              интерьера гостиной, кухни или зоны отдыха в просторной
+              квартире-студии.
+            </p>
+            <h2>Угловые диваны: не очевидные преимущества</h2>
+            <p>
+              В гостиной на мягком диване удобно смотреть телевизор, на кухне
+              его хорошо использовать для организации обеденной зоны; когда
+              приедут гости, вы легко организуете дополнительное спальное место.
+              Кроме этих, есть еще минимум три причины полюбить угловые диваны:
+            </p>
+            <ol>
+              <li>
+                Определенно есть смысл купить угловой диван для размещения в
+                гостиной, ведь он даст больше посадочных мест, чем стандартные
+                варианты.
+              </li>
+              <li>
+                Хорошая зона отдыха работников повысит их продуктивность, а если
+                оборудовать комфортные места ожидания для клиентов, больше
+                вероятность, что они станут лояльнее и дружелюбнее. И под
+                боковой, и под основной частью углов есть отсек для хранения
+                вещей, а значит, вы сможете положить сюда все, чем редко
+                пользуетесь. Некоторые модели производитель снабдил выдвижными
+                мини-барами, прикроватными тумбочками и полочками, куда можно
+                поставить фоторамку, журнал или любимые книги.
+              </li>
+              <li>
+                У нас была цель - сделать качественную мебель доступной. Так что
+                вместо того, чтобы обрастать посредниками, мы начали поставки
+                прямиком фабрики «Софос». Мы получаем ассортимент «с пылу, с
+                жару», и эта мебель оказывается выгодной инвестицией в домашний
+                комфорт.
+              </li>
+            </ol>
+          </div>
+          <div class="btn-arrow-sofas" id="btn-sofas">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="kitchen content-tab" id="kitchen">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-1.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кухонный гарнитур</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-2.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кухонный гарнитур</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-3.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кухонный гарнитур</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-4.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кухонный гарнитур</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-5.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кухонный гарнитур</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/kitchen-set/img-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кухонный гарнитур</span>
+              <h4>аква Savana/latte</h4>
+            </div>
+            <div class="price">
+              <span>24000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-kitchen">
+          <h2>
+            Кухня без забот: готовые кухонные решения от магазина «Будуар»
+          </h2>
+          <div class="text-kitchen">
+            <p>
+              Высокое качество и эстетика оформления – главные плюсы в любой
+              кухне. Но магазин «Будуар» дарит вам еще один: очень приятную
+              стоимость кухонь, которые продаются в виде готового
+              решения.Частично на готовые комплекты кухонь в «Будуар»
+              низкая цена обусловлена прямыми поставками с фабрики «Империал» в
+              обход посредников. Вторая причина доступности в том, что готовые
+              решения мы подбираем для вас самостоятельно, и магазину проще с
+              ними управиться в плане складирования и доставки. Для Вас же это
+              возможность сэкономить деньги и время на подбор отдельных модулей,
+              ведь наши дизайнеры уже сделали это за Вас!
+            </p>
+            <h2>Готовые комплекты для кухни: приятные цены и минимум забот</h2>
+            <p>
+              В ассортименте нашего магазина легко выбрать готовый кухонный
+              гарнитур, купить готовое решение из каталога «Будуар»
+              подталкивает не только доступная цена гарнитура. Дело в том, что в
+              нашем интернет магазине готовая кухня – это подобранный со вкусом
+              и с учетом эргономики мебельный ансамбль. Это кухонная мебель, в
+              которой наши дизайнеры продумали каждый элемент и позаботились о
+              том, чтобы вам было комфортно готовить, расставлять посуду и
+              хранить продукты. Это вариант, когда можно купить недорого кухню и
+              начинать пользоваться мебелью сразу после покупки.Учитывать
+              приходится только размеры комнаты, чтобы купить кухонный гарнитур
+              в интернет магазине так, чтобы он удачно вписался по метражу. И,
+              конечно, он должен нравится вам. И здесь мы тоже учли разные
+              современные стилевые направления: от классики и прованса до таких
+              модных сейчас минимализма и лофта.Возможность выбрать современные
+              готовые кухонные гарнитуры здорово выручает, когда нужно быстро
+              обустроить комнату и продумать каждый элемент, но на это просто не
+              хватает времени, или когда купить мебель, сделанную на заказ, не
+              позволяет цена. Мы стараемся предоставить вам стильные,
+              качественные, но в то же время бюджетные решения.Когда вы отдаете
+              предпочтение тому, чтобы купить куха гарнитур, только вы решаете,
+              как должен выглядеть комфорт. Мы же отвечаем за высокое качество
+              изделий и их экологичность.
+            </p>
+            <h2>Важные моменты при выборе кух гарнитура</h2>
+            <p>
+              Система трансформации спального места определяет легкость и
+              удобство раскладки. В каталоге «Будуар» собраны модульные
+              угловые диваны, еврокнижки, пантографы, дельфины и другие удобные
+              механизмы трансформации.
+            </p>
+            <h2>Ортопедическое сидение и спинка</h2>
+            <p>
+              Оформление стен кухни, а также преобладающий стиль в других
+              комнатах дома помогают, определиться, когда вы заходите в
+              мебельный магазин: кухня однозначно должна быть выполнена в том же
+              стилевом направлении. Чтобы вам было удобнее найти то, что нужно,
+              кухонную мебель мы уже распределили кухни по тем стилям, в которых
+              они смотрятся наиболее гармонично, иногда один и тот же гарнитур
+              кухни одинаково удачно смотрится в разных стилях. В таком случае
+              вы можете купить любую понравившуюся кухню, которую предлагает вам
+              каталог «Мебель Шары». Надо только отдать предпочтение подходящему
+              цвету и фактуре фасадов. У нас представлена мебель в темных и
+              светлых оттенках, глянцевая и деревянная, с фасадами из стекла или
+              декорированные плетением.Но в процессе выбора есть моменты,
+              которые не терпят компромиссов. Это необходимость организовать
+              удобный рабочий треугольник для хозяйки: плита, мойка,
+              холодильник. Между ними не должно быть расстояние больше, чем два
+              шага. Потому для компактных помещений мы рекомендуем линейные
+              модели, а для площадей больше 12-18 квадратов лучше купить готовую
+              кухню углового формата или с барной стойкой. При такой планировке
+              и готовить удобно, и остается место для обеденной группы.Мы
+              настоятельно не советуем выбрать в магазине мебель с дешевой
+              фурнитурой, и потому принципиально используем в производстве кухни
+              качественные петли, механизмы ящиков, крепление ручек. Лучше
+              подловить момент и купить добротную готовую кухню по акции, чем
+              экономить на качестве. А ведь «Будуар» регулярно устраивает
+              распродажи и делает скидки, так что с нами вы можете позволить
+              себе самую лучшую модель!
+            </p>
+            <h2>
+              Что нужно знать, прежде, чем купить кухню через интернет магазин
+              мебели?
+            </h2>
+            <p>
+              Даже в самых бюджетных моделях нашего каталога установлена
+              качественная фурнитура. Фабрика «Империал» позаботилась о том,
+              чтобы фурнитура выдерживала высокие нагрузки в течение длительного
+              периода времени. Результат: все ящики оснащаются направляющими
+              полного выдвижения, они открываются одним легким движением, а
+              дверцы всегда закрываются плотно, не оставляя зазоров.Гарантии на
+              приобретение кухонных наборов:
+            </p>
+            <ul>
+              <li>
+                36 месяцев безупречной службы. Кухня на деле пробудет в
+                эксплуатации значительно дольше, и отзывы говорят о том, что
+                гарнитуру не будет сносу, но когда вы решаете купить готовый
+                набор, по умолчанию на него дается 3 года гарантии.
+              </li>
+              <li>
+                Сертифицированные материалы для производства кухни, мы работаем
+                над дизайном для готовых гарнитуров, стараемся удивить Вас
+                приятными ценами. Но не менее важно для вас предложить изделия
+                самого высокого качества. Мы делаем мебель, как для себя.
+              </li>
+              <li>
+                Натуральность изделий. Каждая кухня производится на фабрике
+                «Империал» со строгим соблюдением «зеленых принципов», но
+                поскольку мы получаем товар прямо от производителя, то и купить
+                Вы можете по вполне адекватной цене. Мы отвечаем за то, что наша
+                мебель не выделяет токсинов и не вызывает аллергии при контакте
+                с ней.
+              </li>
+            </ul>
+            <p>
+              Находите в нашем каталоге самую красивую готовую кухню, создавайте
+              интерьер своей мечты и наслаждайтесь комфортной обстановкой, в
+              которой так и хочется готовить новые вкусненькие блюда, радовать
+              родных и приглашать друзей!
+            </p>
+          </div>
+          <div class="btn-arrow-kitchen" id="btn-kitchen">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="dressers content-tab" id="dressers">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/dressers/dresser-1.jpg"
+              alt="dresser-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Комод</span>
+              <h4>Мишель 4ящ Антрацит/белый жемчуг</h4>
+            </div>
+            <div class="price">
+              <span>7000 руб.</span>
+              <span>2000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/dressers/dresser-2.jpg"
+              alt="dresser-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Комод</span>
+              <h4>Эшли 80 Венге/сонома</h4>
+            </div>
+            <div class="price">
+              <span>7000 руб.</span>
+              <span>1300 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/dressers/dresser-3.jpg"
+              alt="dresser-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Комод</span>
+              <h4>Стелс 4ящ Дуб сонома/белый</h4>
+            </div>
+            <div class="price">
+              <span>6500 руб.</span>
+              <span>1500 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/dressers/dresser-4.jpg"
+              alt="dresser-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Комод</span>
+              <h4>Сенди КМ-04 Сонома</h4>
+            </div>
+            <div class="price">
+              <span>4000 руб.</span>
+              <span>3000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/dressers/dresser-5.jpg"
+              alt="dresser-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Комод</span>
+              <h4>BTS мс Маркиза КМ-01 сонома/крем-сатин</h4>
+            </div>
+            <div class="price">
+              <span>4000 руб.</span>
+              <span>3000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/dressers/dresser-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Комод</span>
+              <h4>Сенди КМ-04 Сонома</h4>
+            </div>
+            <div class="price">
+              <span>2000 руб.</span>
+              <span>1300 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-dressers">
+          <h2>Комод: еще не шкаф, уже не тумбочка</h2>
+          <div class="text-dressers">
+            <p>
+              Комоды из интернет магазина "Будуар" удивительным образом
+              сочетает в себе компактность прикроватной тумбочки с
+              вместительностью шкафа. Давайте-ка воспользуемся этим
+              преимуществом на полную! А как выбрать комод и куда потом его
+              поставить – об этом поговорим прямо сейчас.
+            </p>
+            <h2>Где такой мебели самое место?</h2>
+            <p>
+              Купить комод через интернет магазин нужно не для загромождения
+              пространства, а наоборот, чтобы комната стала более свободной,
+              организованной и уютной. Поставить его можно в любой части дома,
+              где остались незадействованные места вдоль стены:
+            </p>
+            <ul>
+              <li>
+                В спальне, вместо прикроватной тумбочки или в изножье кровати, в
+                качестве дополнения к основному шкафу, или даже вместо него.
+                Например, модели «Эшли» и «Стелс» оказываются достаточно
+                широкими и глубокими, их вместительности хватает, чтобы удобно
+                расположить большое количество вещей.
+              </li>
+              <li>
+                В детской комнате комоды красиво смотрятся на фото, но главное –
+                они позволяют удобно разложить детскую одежду, разные
+                принадлежности и даже игрушки. Пока ребенок маленький, верх
+                комода допустимо использовать как пеленальный столик, а
+                подрастет – там начнут обитать книжки, мягкие игрушки, при
+                желании можно и аквариум поставить.
+              </li>
+              <li>
+                В коридоре или прихожей прекрасно функционируют модели с ящиками
+                и дверцами. В той части, где открываются распашные створки,
+                хватит места для коробок с обувью или для сумок. В ящики удобно
+                положить ключи, перчатки, очки и другие мелочи. Получается, что
+                даже один комод заказать в интернете – это уже удачное решение
+                вопроса с обустройством коридора.
+              </li>
+            </ul>
+            <h2>
+              Почему хорошо комод заказывать через интернет магазин «Мебель
+              Шара»?
+            </h2>
+            <p>
+              В магазине "Будуар" на все комоды действует очень приятная
+              цена, да настолько, что почти невозможно удержаться - хочется
+              купить. Объясним, почему так выгодно: все дело в том, что это
+              мебель от производителя. Вот как бывает, когда посредников нет, и
+              Вы не переплачиваете лишнего за отличное изделие!Мы следим за
+              качеством, это для нас дело чести, а не просто сертификат на
+              каждый товар. Качество проявляется в деталях: хорошая фурнитура,
+              широкие стенки, способные выдержать большие нагрузки, бесшумное
+              выдвижение ящиков, качественные направляющие, отсутствие щелей
+              между ящиком и корпусом.По конфигурации можно найти модели с
+              разной глубиной, длиной и в любом стиле: от классики до
+              современности. Если вы уже выбирали у нас модульную мебель, то и
+              этот элемент можете взять из аналогичной линейки. В таком случае
+              даже выбирать подолгу не придется. Выглядеть комод будет так же,
+              как и на фото, только оттенок может слегка отличаться, а вот цена
+              может только уменьшаться, пока действуют различные скидки и акции.
+            </p>
+            <h2>Лайфхаки: как использовать комод в интерьере?</h2>
+            <p>
+              Мы собрали для вас еще целый список причин купить комоды. Вы уже
+              знаете, как максимально эффективно использовать внутреннее
+              наполнение, очередь за столешницей. Верхняя часть изделия может
+              служить:
+            </p>
+            <ul>
+              <li>Подставкой для ноутбука или телевизора.</li>
+              <li>Местом обитания вазы с цветами, сувениров и фоторамок.</li>
+              <li>
+                Подставкой под телевизор. Как вариант, телевизор крепится на
+                стене над комодом.
+              </li>
+              <li>
+                Удобным туалетным столиком, в который он превращается, когда
+                комплектуется зеркалом. Такой же гарнитур удачно станет в
+                прихожей.
+              </li>
+            </ul>
+            <p>
+              А на Новый год декорируйте комод под камин, повесьте на него
+              носочки с конфетками, украсьте искусственным снегом и дождиком –
+              будет красиво, и цены на комод точно ниже, чем на камин.
+              Экспериментируйте с интерьером, делайте его уютным и красивым. А
+              мы Вам в этом с радостью поможем.Всегда Ваша, «Будуар»!
+            </p>
+          </div>
+          <div class="btn-arrow-dressers" id="btn-dressers">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="beds content-tab" id="beds">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bed/bed-1.jpg" alt="dresser-1" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кровать</span>
+              <h4>Аврора 140*200 (основание ЛДСП) Венге/дуб молочный</h4>
+            </div>
+            <div class="price">
+              <span>12000 руб.</span>
+              <span>10000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bed/bed-2.jpg" alt="dresser-2" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кровать</span>
+              <h4>Аврора 140*200 (основание ЛДСП) Белый/ателье светлый</h4>
+            </div>
+            <div class="price">
+              <span>17000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bed/bed-3.jpg" alt="dresser-3" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кровать</span>
+              <h4>Эшли 140*200 (без ламелей) Венге/сонома</h4>
+            </div>
+            <div class="price">
+              <span>16500 руб.</span>
+              <span>11500 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bed/bed-4.jpg" alt="dresser-4" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кровать</span>
+              <h4>Аврора 120*200 (основание ЛДСП) Белый/ателье светлый</h4>
+            </div>
+            <div class="price">
+              <span>14000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bed/bed-5.jpg" alt="dresser-5" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Кровать</span>
+              <h4>Аврора 120*200 (основание ЛДСП) Венге/дуб молочный</h4>
+            </div>
+            <div class="price">
+              <span>40000 руб.</span>
+              <span>30000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img src="./my-img/sales-leaders/bed/bed-6.jpg" alt="sofa-1" />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Ортопедическое основание</span>
+              <h4>180*200 Береза</h4>
+            </div>
+            <div class="price">
+              <span>6000 руб.</span>
+              <span>4300 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-beds">
+          <h2>Все для спальни: кровати и матрасы в магазине «Будуар»</h2>
+          <div class="text-beds">
+            <p>
+              Кровать и матрас – два главных элемента спальни. С них начинается
+              обустройство интерьера, и они задают стилевое направление в
+              оформлении комнаты. И разу уж мы так любим поспать, важно, чтобы
+              кровать и матрас оказались еще и максимально удобными. Кажется,
+              что это сложная задачка. Но как только вы заходите в наш интернет
+              магазин, кровати и матрасы выстраиваются в едином разделе. Вы
+              сразу видите, какие товары есть в ассортименте магазина «Мебель
+              Шара». Не нужно где-то дополнительно искать и сравнивать – все уже
+              перед глазами. И это еще не все…
+            </p>
+            <h2>Вместе или по отдельности: купить кровать и матрас</h2>
+            <p>
+              Купить кровать с основанием и матрасом недорого – это лучшее
+              решение с точки зрения удобства. Когда вы заказали кровать и
+              матрас вместе, они и придут вместе. Не нужно оформлять заказы в
+              разных магазинах, легко уточнить, подходят ли выбранные кровати и
+              матрасы друг другу. В итоге вы получили сразу все необходимое и
+              можно сразу приступать к обустройству комнаты, не дожидаясь, пока
+              вам доставят то одно, то другое. Наслаждайтесь комфортом сразу, не
+              откладывая на потом. Когда вы решаете купить кровать и матрас
+              отдельно друг от друга, у этого тоже есть свои преимущества. Вы
+              точно знаете, что именно ищете (какого размера кровать и матрас
+              купить, какими характеристиками они обязательно должны обладать и
+              пр.).
+            </p>
+            <h2>Когда вы покупаете матрасы и кровати в «Будуар»…</h2>
+            <p>
+              Выберите для себя самые важные параметры, на которые будете
+              ориентироваться.
+            </p>
+            <ul>
+              <li>
+                Размер. Купить кровать с матрасом и подъемным механизмом можно
+                односпальную, полуторную или двуспальную, с шириной 90, 140, 160
+                или 180 см, по длине у нас все модели кроватей одинаковые – 200
+                см. Соответственно им подбирается и размер матраса. Отдельно у
+                нас есть матрасы и топперы специально для детских кроваток. У
+                всех матрасов для кроватей размеры и цены указаны справа возле
+                товара.
+              </li>
+              <li>
+                Дизайн. В ассортименте нашего магазина представлены простые
+                кровати односпальные и полутораспальные. Каталог и цены (с
+                матрасом или без) собраны на этой страничке. Кроме простых
+                моделей, декорированных под дерево, есть более изысканные
+                варианты. Такие легко встраиваются в современный стиль, прованс
+                или классику, и подходят для установки как в просторных
+                спальнях, так и компактных гостевых или детских комнатах.
+              </li>
+              <li>
+                Комплектация. Можно сразу заказать кровать с матрасом и
+                подъемным механизмом целиком. Но если один из этих элементов у
+                вас уже есть, начните с самого необходимого. У нас есть чистые
+                каркасы без лишних деталей, кровати с ламелями и разные матрасы.
+                Выбирайте те элементы, которые вам нужны.
+              </li>
+              <li>
+                Наличие дополнительных опций. Самыми удобными считаются кровати
+                с подъемным механизмом и матрасом: здесь предусмотрена и
+                вместительная ниша для хранения вещей и удобная система доступа
+                к ним. Но это в вашем понимании комфорт может выглядеть иначе,
+                поэтому мы предусмотрели для вас модели с выдвижными ящиками,
+                дополнительными полочками возле односпальной кровати и красивые
+                кровати с мягкими спинками.
+              </li>
+            </ul>
+            <p>
+              Перед тем, как выбрать кровать и матрас, сфокусируйтесь на том,
+              какие из этих параметров для вас являются определяющими, или
+              отдавайте предпочтение моделям, которые прошли кастинг по всем
+              названным пунктам. Мы же добавим, что все товары в нашем каталоге
+              долго служат, имеют сертификаты качества, а стоимость одна из
+              самых приятных на рынке. Самые дорогие у нас кровати двуспальные.
+              В каталоге цены с матрасом еще немного выше, потому что матрас -
+              отдельный товар. Но даже на двуспалки мы держим самую выгодную
+              цену. Магазин «Будуар» доказывает: «качественно» не равно
+              «дорого».
+            </p>
+            <h2>Особенности:</h2>
+            <ul>
+              <li>
+                Независимый пружинный блок HONEY COMB помогает сделать
+                поверхность матраса достаточно мягкой и адаптировать ее под
+                анатомические изгибы позвоночника.
+              </li>
+              <li>
+                Стальная рама по периметру матраса STEELEDGE дает изделиям
+                необходимую прочность, и потому они служат дольше аналогов без
+                стальной рамки.
+              </li>
+              <li>
+                Аэрационная сетка позволяет поверхности проветриваться, и матрас
+                не набирается влагой и всегда остается приятным на ощупь.
+              </li>
+              <li>
+                Слой термовойлока защищает верхний слой изделия от воздействия
+                пружин и тем самым продлевает срок эксплуатации.
+              </li>
+              <li>
+                В производстве задействованы гипоаллергенные материалы,
+                соответствующие строгим европейским стандартам качества.
+              </li>
+            </ul>
+            <p>
+              Кроме матрасов, в каталоге есть топперы, которые часто покупают
+              для диванов с перепадами по высоте или с зазорами между сидением и
+              спинкой. Некоторые из них помещаются в чехлы на молнии, их удобно
+              стирать, не трогая сам топпер. А вы уже выбрали себе самую мягкую
+              и удобную кровать в «Будуар»? Обратите внимание, что на
+              многие товары действуют скидки – не упустите свой шанс ими
+              воспользоваться!
+            </p>
+          </div>
+          <div class="btn-arrow-beds" id="btn-beds">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="child-room content-tab" id="child-room">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/child-room/child-room-1.jpg"
+              alt="child-room-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Модульная детская</span>
+              <h4>Малибу Ясень белый/айскрим/белый</h4>
+            </div>
+            <div class="price">
+              <span>32000 руб.</span>
+              <span>20000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/child-room/child-room-2.jpg"
+              alt="child-room-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Модульная детская</span>
+              <h4>Валенсия Дуб сонома</h4>
+            </div>
+            <div class="price">
+              <span>14000 руб.</span>
+              <span>11000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/child-room/child-room-3.jpg"
+              alt="dresser-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Модульная детская</span>
+              <h4>Стелс Дуб сонома/белый</h4>
+            </div>
+            <div class="price">
+              <span>40500 руб.</span>
+              <span>35500 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/child-room/child-room-4.jpg"
+              alt="dresser-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Модульная детская</span>
+              <h4>Маркиза Сонома/крем-сатин</h4>
+            </div>
+            <div class="price">
+              <span>14000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/child-room/child-room-5.jpg"
+              alt="dresser-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Домашний офис</span>
+              <h4>Базис 3 Черный /дуб сонома</h4>
+            </div>
+            <div class="price">
+              <span>10000 руб.</span>
+              <span>9000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/child-room/child-room-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Модульная детская</span>
+              <h4>Стелс Дуб сонома/белый</h4>
+            </div>
+            <div class="price">
+              <span>26000 руб.</span>
+              <span>24300 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-child">
+          <h2>Обустраиваем современную детскую комнату</h2>
+          <div class="text-child">
+            <h2>Когда вы покупаете матрасы и кровати в «Будуар»…</h2>
+            <p>
+              Детям мы готовы отдать все и даже чуточку больше. И когда речь о
+              том, как сделать удобной комнату для ребенка, мы ищем самую
+              качественную детскую модульную мебель. Магазин «Будуар» решил
+              помочь вам с обустройством детской: в каталоге вы найдете
+              качественную, красивую и удобную мебель для детей любого возраста:
+              от малышей и подростков, до выпускников старших классов и даже
+              студентов.Для «Мебель Шары» важнее всего качество, натуральные
+              материалы и безопасность изделия. Мы по умолчанию предлагаем вам
+              именно такие варианты модульной мебель для детской комнаты. В
+              нашем понимании:
+            </p>
+            <ul>
+              <li>
+                Экологичность – отсутствие токсинов в материалах для
+                производства, отсутствие испарений от клея. Наши изделия не
+                распространяют никаких запахов, не вызывают аллергии.
+              </li>
+              <li>
+                Безопасность: скругленные края, плотная кромка, надежная сборка.
+              </li>
+              <li>
+                Качество - это сумма указанных факторов, к которым прибавляется
+                прочность, красивая отделка, добротная фурнитура.
+              </li>
+            </ul>
+            <p>
+              Эти пункты остаются неизменными, какой бы комплект детской
+              модульной мебели вы бы ни выбрали в интернет-магазине. А вот что
+              можно менять, так это стиль: вот здесь у «Мебель Шары» для Вас
+              хорошие новости – наш ассортимент позволяет найти безупречное
+              решение для комнаты именно вашего ребенка. И никаких компромиссов!
+              Бонус: вас ждет стильная, современная детская модульная мебель
+              недорого. У нас нет посредников, потому мы уверены в качестве
+              продукта, который предлагаем вам. По этой же причине и цена ниже.
+              Как вам такое?
+            </p>
+            <h2>Три вопроса, на которые нужно ответить в процессе выбора</h2>
+            <ul>
+              <li>де хранить вещи?</li>
+              <p>
+                Мари Кондо обрела известность своим методом «магической уборки».
+                Суть метода: выгребаете все вещи на пол, перебираете, оставляете
+                те, которые приносят радость. Остальное – раздаете. Так вот,
+                когда вы выбросите на пол все детские вещи, обнаружите,
+                насколько их много. Вы даже не догадываетесь, насколько много.
+                Вот ради эксперимента – попробуйте. Даже если вы последуете
+                методу Мари и таки выбросите половину этих предметов, останется
+                еще достаточно много. Им нужен вместительный шкаф, стеллажи,
+                пеналы, навесные полки и тумбы. Вся эта модульная мебель для
+                детских есть в ассортименте «Мебель Шары». Причем есть как
+                прямые, так и угловые шкафы и стеллажи: вы точно сможете
+                эффективно использовать пространство комнаты.
+              </p>
+              <li>Где делать уроки?</li>
+              <p>
+                Сайт HeadHunter недавно проводил исследование «Влияние комфорта
+                рабочего места на мотивацию сотрудников и их продуктивность».
+                47% людей на лучше организованном рабочем месте стали работать
+                эффективнее и быстрее. Остальные респонденты отметили, что они
+                стали более усидчивыми, улучшилось настроение и состояние
+                здоровья. За месяц компания, на которой проводили эксперимент,
+                подняла доход на треть.Причем тут детская комната? Да притом,
+                что если на взрослый организм так сильно влияет качество
+                рабочего места, то можете себе представить, как от удобства
+                письменного стола и стула зависит учеба ребенка? Хотите хороших
+                оценок в школе – отправляйтесь в магазины детской модульной
+                мебели в поисках нормального гарнитура. Или просто оставайтесь
+                здесь – в нашем каталоге собраны лучшие варианты, причем
+                различные: с полками, надставками, навесными тумбами…
+              </p>
+              <li>Где отдыхать?</li>
+              <p>
+                В наши линейки корпусной мебели входят комфортные односпальные
+                или полутораспальные кровати, комоды, стеллажи для игрушек.
+                Некоторые стеллажи-пеналы поставляются с разной конфигурацией
+                полок, а некоторые снабжаются одновременно ящиками и полками,
+                что делает шкаф предельно функциональным и практичным. У нас
+                даже есть сундук-пуфик. Это вообще невероятная вещь для
+                обустройства игровой зоны. Внутри – куча места для игрушек, а
+                наверх можно положить красивую подушку или накинуть ковер, здесь
+                будет мягко и тепло, можно присесть или прилечь.
+              </p>
+            </ul>
+            <h2>Совершенный комплект детской модульной мебели</h2>
+            <p>
+              Покупая готовый комплект, подобранный нашими дизайнерами, Вы
+              получаете полноценный гарнитур. Это удобно, ведь здесь все
+              собрано, как на фото, и все элементы отлично между собой
+              сочетаются, осталось только расставить предметы по комнате. Но
+              можно купить детскую модульную мебель в базовом комплекте, а потом
+              по отдельности докупить нужные элементы: на что хватает финансов,
+              или по необходимости. Модульная мебель в детскую в «Будуар»
+              таким образом подходит как для компактных, так и для просторных
+              комнат. Само собой, Вы можете выбирать модули согласно возрасту
+              ребенка. Малышам нужно много свободного места для игр, стеллажи с
+              открытыми полками для игрушек, а мебель для подростка – это
+              обязательное наличие компьютерного или письменного стола, точно
+              пригодится большой шкаф для вещей. В основном детская модульная
+              мебель из нашего каталога подразумевает универсальные решения,
+              которые подходят для создания яркого и современного интерьера в
+              детской для ребенка любого пола и возраста: и мальчиков, и
+              девочек. А еще наши готовые комплекты – это самый удобный способ
+              обустроить комнату для двоих ребят. Подстраивайте комнату под
+              увлечения и возраст ребенка, без необходимости полностью менять
+              всю детскую. Выбирайте: долго мечтать о том, чтобы сделать для
+              детей все возможное, или просто купить качественную и красивую
+              мебель без переплат, и подарить малышам и подросткам то, о чем
+              мечтают именно они.
+            </p>
+          </div>
+          <div class="btn-arrow-child" id="btn-child">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="hallway content-tab" id="hallway">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/hallway/hallway-1.jpg"
+              alt="hallway-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Прихожая</span>
+              <h4>Интер Дуб сонома/белый</h4>
+            </div>
+            <div class="price">
+              <span>32000 руб.</span>
+              <span>20000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/hallway/hallway-2.jpg"
+              alt="child-room-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Прихожая</span>
+              <h4>Лайт Дуб сонома/белый</h4>
+            </div>
+            <div class="price">
+              <span>14000 руб.</span>
+              <span>11000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/hallway/hallway-3.jpg"
+              alt="dresser-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Прихожая</span>
+              <h4>Ксения-1 Венге/крем</h4>
+            </div>
+            <div class="price">
+              <span>40500 руб.</span>
+              <span>35500 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/hallway/hallway-4.jpg"
+              alt="dresser-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Прихожая</span>
+              <h4>Кензо Крафт/метрополитан грей</h4>
+            </div>
+            <div class="price">
+              <span>14000 руб.</span>
+              <span>13000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/hallway/hallway-5.jpg"
+              alt="dresser-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Прихожая</span>
+              <h4>Маэстро Венге/лоредо</h4>
+            </div>
+            <div class="price">
+              <span>10000 руб.</span>
+              <span>9000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/hallway/hallway-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Прихожая</span>
+              <h4>Виола Венге/сонома</h4>
+            </div>
+            <div class="price">
+              <span>26000 руб.</span>
+              <span>24300 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-hallway">
+          <h2>Набор мебели для прихожей: важный элемент комфорта</h2>
+          <div class="text-hallway">
+            <p>
+              Что по-настоящему важно для оформления коридора? Красивое большое зеркало, чтобы взглянуть на себя перед тем, как отправиться по делам. Вместительныйшкаф-купедля верхней одежды, а лучше – еще и крючки для одежды гостей. Вам пригодится место под обувь, открытая полочка для косметики. А, возможно, и пуфик понадобится, чтобы удобно присесть, и только после этого снимать обувь.Комплект мебели в прихожей встречает вас с работы и провожает, когда вы уходите. Кажется, что подобрать прихожую в каталоге "Мебель Шары" – сущая мелочь. Но именно из таких мелочей состоит комфорт. Так что магазин «Будуар» предоставил Вам возможностькупить мебельв коридор выгодным ценам и в любом дизайне: классические, современные и даже в стиле «хай-тек»... Здесь Вы точно найдете все, что душа пожелает…
+            </p>
+            <h2>Как правильно подобрать конфигурацию мебели в коридор или прихожую? Цена - не главное</h2>
+            <p>В процессе выбора самой удобной мебели в прихожую, нужно прежде всего определиться с местом установки шкафов. Затем Вам предстоит сделать точный замер площади, выделяемой под гарнитур, чтобы заказать набор мебели в прихожую по своим размерам. Это может быть функциональное и вместительное решение или же компактная модель для небольшого коридора. На все случаи наш магазин предусмотрел гармоничный и удобный по всем параметрам вариант.Купить прихожие можно с разным количеством и расположением полок и ящиков, поэтому мы советуем составить предположительный список вещей, которые собираетесь здесь разместить, и выбирать конфигурацию, исходя из своих потребностей. Размер в сумме с пожеланиями к наполнению, дают Вам результат в виде идеальной мебели, и купить такую прихожую можно прямо в нашем магазине.</p>
+            <h2>Модульная стенка или шкаф-купе: какую купить мебель для прихожей в интернет магазине "Будуар"?</h2>
+            <p>Следующий этап – выбор конструкции. Все модели можно условно поделить на модули стандартной конфигурации и шкафы-купе. Вариант первый: распашной шкаф, несколько открытых полок, иногда в конструкции предусмотрены удобные ящики для мелких вещей. Все блоки в прихожей смотрятся замечательно не только на фото, но и в реальном интерьере, да и цена такой мебели не утяжелит бюджет. Некоторые блоки Вы можете выбирать, есть некая основа, а чем ее дополнить: стеллажом или пеналом, еще одним зеркалом или комодом - это уже ваше личное дело. Наша же задача - позаботиться о качестве, вашем удобстве и занести в каталог исключительно доступные цены.Шкафы-купе здорово экономят пространство комнаты. В компактных прихожих они становятся единственно возможным решением, ведь для открытия дверей распашного шкафа нужно дополнительное место. Тогда, как створки просто разъезжаются в стороны, и это невероятно удобно. Еще одна польза от шкафа-купе: многие модели имеют крупный фото-принт, зеркальные или глянцевые фасады. Все эти эффекты созданы не только для красоты - с их помощью удается визуально расширить площадь комнаты. И опять-таки, зеркало в коридоре - необходимая часть интерьера.</p>
+            <h2>Три вопроса, на которые нужно ответить в процессе выбора</h2>
+              <p>Следующий этап – выбор конструкции. Все модели можно условно поделить на модули стандартной конфигурации и шкафы-купе. Вариант первый: распашной шкаф, несколько открытых полок, иногда в конструкции предусмотрены удобные ящики для мелких вещей. Все блоки в прихожей смотрятся замечательно не только на фото, но и в реальном интерьере, да и цена такой мебели не утяжелит бюджет. Некоторые блоки Вы можете выбирать, есть некая основа, а чем ее дополнить: стеллажом или пеналом, еще одним зеркалом или комодом - это уже ваше личное дело. Наша же задача - позаботиться о качестве, вашем удобстве и занести в каталог исключительно доступные цены.Шкафы-купе здорово экономят пространство комнаты. В компактных прихожих они становятся единственно возможным решением, ведь для открытия дверей распашного шкафа нужно дополнительное место. Тогда, как створки просто разъезжаются в стороны, и это невероятно удобно. Еще одна польза от шкафа-купе: многие модели имеют крупный фото-принт, зеркальные или глянцевые фасады. Все эти эффекты созданы не только для красоты - с их помощью удается визуально расширить площадь комнаты. И опять-таки, зеркало в коридоре - необходимая часть интерьера.</p>
+              <h2>Выбираем стиль</h2>
+              <p>Шкафы и стеллажи не всегда в комнате заметны, они будто растворяется в коридоре, сливаясь со стенами. И пусть они не акцентируют внимание на себе, их дизайн все же важен. Так, красивые модели «Маэстро», «Лола» и «Ксения» прекрасно вписываются в современные лаконичные интерьеры. В свою очередь «Виола» - это чистая классика, а «Стелс» - ода стилям hi-tech и минимализм.Теперь Вы знаете, как должна выглядеть Ваша идеальная прихожая. Купить в интернете как раз такую мебель, о которой Вы мечтаете, вам поможет наш магазин. В каталоге собраны варианты на любой вкус, размер, с разными комбинациями дверей, ящиков и открытых полок. И все это – по невероятно выгодной стоимости. Побалуйте себя красивой качественной мебелью, ведь Вы хотите, чтобы в доме царила теплая гостеприимная обстановка, ощутимая прямо с порога?</p>
+          </div>
+          <div class="btn-arrow-hallway" id="btn-hallway">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="household-products content-tab" id="household-products">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/household-products/household-products-1.jpg"
+              alt="hallway-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Декоративная подушка</span>
+              <h4>BENGI</h4>
+            </div>
+            <div class="price">
+              <span>2000 руб.</span>
+              <span>10000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/household-products/household-products-2.jpg"
+              alt="child-room-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Декоративная подушка</span>
+              <h4>AQUAREL</h4>
+            </div>
+            <div class="price">
+              <span>900 руб.</span>
+              <span>800 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/household-products/household-products-3.jpg"
+              alt="dresser-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Декоративная подушка</span>
+              <h4>JUMBLE</h4>
+            </div>
+            <div class="price">
+              <span>1500 руб.</span>
+              <span>1000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/household-products/household-products-4.jpg"
+              alt="dresser-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Пуф</span>
+              <h4>Эшли Венге/сонома</h4>
+            </div>
+            <div class="price">
+              <span>1700 руб.</span>
+              <span>12000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/household-products/household-products-5.jpg"
+              alt="dresser-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Пуф</span>
+              <h4>Квадро Тип 2 Велюр Town Grey</h4>
+            </div>
+            <div class="price">
+              <span>2500 руб.</span>
+              <span>1800 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/household-products/household-products-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Чехол для пуфов</span>
+              <h4>Азимут CIVIC GRAFIT</h4>
+            </div>
+            <div class="price">
+              <span>2600 руб.</span>
+              <span>2400 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-household">
+          <h2>Декоративные подушки – самый простой способ украсить интерьер</h2>
+          <div class="text-household">
+            <p>
+              Домашний текстиль считается самым эффективным инструментом для создания приятной уютной атмосферы. Декоративную подушку для украшения интерьера удобно будет купить в интернет магазине «Будуар». В наборы включено по 4 элемента разных цветов, которые вместе гармонично и красиво смотрятся на диванах, креслах, даже на полу, когда мы говорим о детских комнатах или оформлении антуража в восточном стиле.
+            </p>
+            <h2>Важные характеристики интерьерных подушек в интернет магазине «Будуар»</h2>
+            <ul>
+              <li>Качество. Добротные наволочки выдерживают много циклов стирки без потери цвета, и остаются такими же мягкими, как в первый день после покупки. Наполнитель долго остается объемным и не дает усадку.</li>
+              <li>Красота. Подушка декоративная от турецкого производителя прекрасно выглядит на диване, на кресле, на топчане или кровати, даже не верится, что на столь качественные и красивые вещи бывает такая приятная цена! Яркий набор текстиля сделает дизайн более сочным. Однотонность, с которой ворвался в наши дома минимализм – это отлично. Но и здесь декоративные подушки в интерьере не будут лишними. Просто проверьте, и сами во всем убедитесь.</li>
+              <li>Удобство. Знаете ли Вы, какие мягкие на ощупь наши подушки декоративные? То-то же! Возьмите парочку с собой в кресло: одну положите под спину, и она будет поддерживать позвоночник, пока вы читаете книгу, смотрите телевизор или общаетесь с друзьями. А еще одну положите на колени или обнимите. Почувствуйте, под пальцами теплую бархатистую основу, насладитесь мягкостью подушки! Декоративные подушечки на диван создают доброе настроение, это в них заключается секрет, почему у вас дома так уютно и стильно.</li>
+            </ul>
+            <h2>Для каких комнат имеет смысл купить интерьерные подушки?</h2>
+            <p>Чаще всего приходится заказывать декоративную подушку с целью разнообразить дизайн гостиной. Здесь главная задача декоративных элементов - кочевать с кресла на диван, с дивана на пол - и дальше по кругу. Иногда они добираются до спальни, чтобы украсить собой спальное место. Они помогают сделать комнату интереснее, подчеркивают выбранный стиль декора и определенно добавляют в помещение уют и тепло. Их также часто располагают на деревянных стульях, особенно, когда на сидении нет мягкой накладки. А еще очень красиво они смотрятся на плетеных креслах на балконе или террасе.В «Будуар» на домашний декоративный текстиль такие вкусные цены, что можно покупать сразу несколько наборов. Подарите красоту в доме не только себе, но и родным, друзьям, знакомым. Это будет тот редкий случай, когда Вам удалось заказать подарок, который выглядит значительно дороже, чем стоит. И заходите к нам еще – наш магазин всегда знает, чем Вас порадовать!</p>
+          </div>
+          <div class="btn-arrow-household" id="btn-household">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="living-room content-tab" id="living-room">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/living-room/living-room-1.jpg"
+              alt="hallway-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стенка</span>
+              <h4>Домино Ателье светлый/белый</h4>
+            </div>
+            <div class="price">
+              <span>32000 руб.</span>
+              <span>21000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/living-room/living-room-2.jpg"
+              alt="child-room-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стенка</span>
+              <h4>Невио-1 Дуб крафт золотой/белый</h4>
+            </div>
+            <div class="price">
+              <span>900 руб.</span>
+              <span>800 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/living-room/living-room-3.jpg"
+              alt="dresser-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стенка</span>
+              <h4>Рио-1 Белый жемчуг/белый гл</h4>
+            </div>
+            <div class="price">
+              <span>1500 руб.</span>
+              <span>1000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/living-room/living-room-4.jpg"
+              alt="dresser-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стенка</span>
+              <h4>Стелс Дуб сонома/белый</h4>
+            </div>
+            <div class="price">
+              <span>1700 руб.</span>
+              <span>12000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/living-room/living-room-5.jpg"
+              alt="dresser-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стенка</span>
+              <h4>Марк Тик/дуб сонома</h4>
+            </div>
+            <div class="price">
+              <span>2500 руб.</span>
+              <span>1800 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/living-room/living-room-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стенка</span>
+              <h4>Джерси Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>2600 руб.</span>
+              <span>2400 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-living">
+          <h2>3 приема для успешного выбора стенки в комнату по выгодной цене</h2>
+          <div class="text-living">
+            <p>
+              Комфортной гостиную делает не эскиз дизайнера, а мебель, которая используется в комнате, и в особенности - стенка, ведь она занимает собой сравнительно много места. "Будуар" поможет Вам выбрать современную стенку в зал, гостиную или детскую. Чтобы у Вас получилось купить идеальную стенку гостиная, специалисты интернет магазина делятся с Вами тремя простыми приемами, которые помогут заказывать стенку в зал, подходящую под все ваши пожелания и потребности. А если останутся вопросы относительно мебели: какая по размеру должна быть стенка для зала или гостинной, или как через наш каталог заказать мебельный гарнитур со стенкой, чтобы его цена Вас полностью устроила, наши менеджеры с удовольствием помогут Вам во всем разобраться.
+            </p>
+            <h2>Изучаем мебельную стилистику</h2>
+            <p>Проще всего отсеивать модели, исходя из стиля комнаты. Стенка «Тоскана» точно подходят под классический интерьер гостиной, а если зал или гостиная оформлены в современной стиле, посмотрите на фото моделей «Виго», «Атланта», «Ненси» или «Лия», причем здесь Вас порадует не только дизайн, но и цена мебели. А вот для антуража в стиле «хай-тек» лучше всего подходят лаконичные современные стеллажи «Омега» или «Матрица».Купить мебельный гарнитур со стенкой согласно выбранному стилю – самый простой критерий для выбора, но как только вы определитесь с этим моментом, останется дело за малым.</p>
+            <h2>Выбираем функциональность</h2>
+            <p>Для однокомнатной квартиры лучше отдавать предпочтение компактным модулям с полками для вещей. Тогда как в просторной квартире-студии нужен вариант, который легко разделит пространство на гостинный уголок и спальню или рабочую зону, и в таком случае купить комплект мебели со стенкой - лучшее решение для зонирования пространства.Перед тем, как купить стенку, определите, что собираетесь в ней разместить. В гостиную чаще всего необходимо купить стенку под телевизор и плюс стеллажи для сувениров и мелких предметов. Сюда можно будет поставить комнатные цветы или расположить здесь аксессуары. Если позволяет площадь, берите модульную модель с современными шкафами, куда удобно сложить весь гардероб. Дополнительное место хранения помогает расхламить пространство, так что такая мебель, как комнатная стенка, здорово поможет Вам в организации домашнего порядка. Отдельные модули с открытыми полками могут перенять на себя функцию библиотеки. Это и смотрится замечательно, и нужную книгу всегда удобно найти, когда библиотека не спрятана за закрытыми фасадами. Стенки в гостиные и другие комнаты:</p>
+            <ul>
+              <li>Варианты, приобретаемые в залу, часто располагают напротив дивана, чтобы удобно поставить телевизор. По бокам они дополняются стеллажами или закрытыми распашными шкафами, которые играют роль гардеробной. Модули можно выбирать любые, зависимо от ваших потребностей.</li>
+              <li>Модели для прихожей помогают эффективно использовать свободное пространство даже в самой маленькой комнате. Обычно они нужны для хранения обуви, сумок и верхней одежды.</li>
+              <li>Изделия, а именно мебель для детской выбирать сложнее всего, ведь они должны быть не только функциональными, но и безопасными. Все модели в нашем магазине имеют сертификат качества и отличаются высокой экологичностью.</li>
+            </ul>
+            <h2>Цены: как выгодно купить стенку через интернет магазин “Будуар”?</h2>
+            <p>Простая мебельная шпаргалка, как получить мебель в комнату со скидкой: заказывайте понравившиеся модели в магазине «Будуар». Они поступают к Вам непосредственно от производителя, минуя толпы посредников, необоснованно накручивающих стоимость готовых изделий. И еще один секрет откроем: наше любимое занятие - устраивать распродажи и акции, воспользовавшись которыми, Вы можете получить свою мебель по цене еще ниже, чем сейчас указана в каталоге. Разве не здорово? Не упустите шанс организовать в доме приятную атмосферу, а мы обязательно поможем Вам в этом!</p>
+          </div>
+          <div class="btn-arrow-living" id="btn-living">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="tables content-tab" id="tables">
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/tables/tables-1.jpg"
+              alt="hallway-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стол журнальный</span>
+              <h4>Дельта Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>32000 руб.</span>
+              <span>21000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/tables/tables-2.jpg"
+              alt="child-room-2"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стол журнальный</span>
+              <h4>Дельта Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>900 руб.</span>
+              <span>800 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/tables/tables-3.jpg"
+              alt="dresser-3"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стол журнальный</span>
+              <h4>Дельта Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>1500 руб.</span>
+              <span>1000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/tables/tables-4.jpg"
+              alt="dresser-4"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стол журнальный</span>
+              <h4>Дельта Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>1700 руб.</span>
+              <span>12000 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/tables/tables-5.jpg"
+              alt="dresser-5"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стол журнальный</span>
+              <h4>Дельта Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>2500 руб.</span>
+              <span>1800 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box card-box">
+          <div class="darken"></div>
+          <div class="images">
+            <img
+              src="./my-img/sales-leaders/tables/tables-6.jpg"
+              alt="sofa-1"
+            />
+            <div class="dimensions">
+              <div class="title">
+                <h4>размеры</h4>
+              </div>
+              <div class="box-container">
+                <div class="width">
+                  <span>ширина</span>
+                  <span>216 см</span>
+                </div>
+                <div class="depth">
+                  <span>глубина</span>
+                  <span>158 см</span>
+                </div>
+                <div class="hight">
+                  <span>высота</span>
+                  <span>76 см</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span>Стол журнальный</span>
+              <h4>Дельта Дуб крафт серый</h4>
+            </div>
+            <div class="price">
+              <span>2600 руб.</span>
+              <span>2400 руб.</span>
+            </div>
+            <div class="icons">
+              <div class="favorites">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-tables">
+          <h2>Как выбрать журнальный столик в интернет-магазине "Будуар"?</h2>
+          <div class="text-tables">
+            <p>
+              Красивый и гармоничный интерьер состоит из десятков разных мелочей, и порой для гармонии не хватает всего пары акцентов. Бывает, достаточно купить журнальный столик, и сразу после доставки Вы обнаружите, что это как раз тот элемент, вокруг которого прекрасно организовались остальные предметы, и с его появлением в доме, интерьер стал как раз таким, каким Вы его себе представляли. И если вы как раз в поисках красивого журнального столика, вы сможете купить его в интернет магазине "Будуар".С помощью аккуратных и функциональных журнальных столиков вы сможете обустроить помещение в нужном стиле. Преимущества такого приобретения вполне очевидные:</p>
+              <ul>
+                <li>мобильность, возможность перемещать его в помещении, в зависимости от потребностей;</li>
+                <li>лаконичность, небольшие габариты;
+                </li>
+                <li>удобство.</li>
+              </ul>
+            <h2>Изучаем мебельную стилистику</h2>
+            <p>В каталог журнальных столиков "Мебель Шары" вошли модели, которые прекрасно сочетают в себе декоративные и практические свойства. Варианты представлены в различных стилевых направлениях: от классики до хай-тек. А с точки зрения функциональности, это далеко не та мебель, куда только и можно, что поставить чашечку кофе. С решением купить журнальный столик через наш интернет магазин, вы обретаете мебель с полочками, дополнительными ящиками, а некоторые модели оснащаются оригинальными системами трансформации, с помощью которых они превращаются в удобное рабочее место или обеденную зону. Такие модели идеально встраиваются в интерьер гостиной, комнат релакса или в зонах отдыха клиентов в парикмахерских, банках, офисах.Модный журнальный столик позволит сделать антураж комнаты удобным и современным, разу уж в нашем каталоге цена на все модели более, чем доступная, тогда давайте позволим себе роскошь выбирать нужный вариант по фото и характеристикам. Выбирая журнальный столик не по цене, а по фото, у Вас гораздо больше шансов найти самую красивую и удобную мебель для вашего дома. Так, если купить журнальний столик с декоративной нижней полкой, это позволит Вам удобно разместить сувениры и книги, фотографии и журналы, небольшого размера современную технику и пульты. Для практичных людей есть журнальные столики в модификации "трансформеры", которые сэкономят место в гостиной в сложенном виде и позволят собраться вокруг них семьей, когда мебель будет разложена. А предоставленный выбор оттенков столиков позволит подобрать нежный тон, чтобы комната казалась чище и просторней или темный (венге или дуб сонома), чтобы подчеркнуть страсть к стилизации и весомым решениям.</p>
+            <h2>Гарантии магазина</h2>
+            <p>Натуральные материалы, сертификат соответствия европейским требованиям экобезопасности, 3 года гарантии - вот главные причины журнальный стол купить именно в онлайн-магазине "Будуар". Покупку можно забрать как в одном из фирменных салонов, или заказать с доставкой по России, и это весьма удобно, ведь теперь для заказа даже из дома выходить не обязательно.А еще мы точно знаем, что у нас самые выгодные цены на рынке - мы проверяли. Стоимость мебели устанавливается не посредниками, а самим производителем, фабрикой "Империал". Хорошие, качественные и стильные вещи не обязательно должны захватить весь семейный бюджет. Заказывайте красивый стол по адекватной стоимости, а на оставшиеся деньги устройте дома вечеринку, чтобы похвастать столь удачным приобретением. А почему бы и нет?</p>
+          </div>
+          <div class="btn-arrow-tables" id="btn-tables">
+            <i class="fas fa-chevron-up"></i>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- секция категория конец -->
+
+    <!-- секция статьи как правильно выбрать начало -->
+    <!-- секция статьи как правильно выбрать конец -->
+
+    <!-- секция футер начало -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Быстрые ссылки</h3>
+          <a href="home.html"><i class="fas fa-arrow-right"></i> Главная</a>
+          <a href="shop.html"><i class="fas fa-arrow-right"></i> Магазин</a>
+          <a href="about.html"><i class="fas fa-arrow-right"></i> О нас</a>
+          <a href="review.html"><i class="fas fa-arrow-right"></i> Отзывы</a>
+          <a href="blog.html"><i class="fas fa-arrow-right"></i> Блог</a>
+          <a href="contact.html"><i class="fas fa-arrow-right"></i> Контакты</a>
+        </div>
+        <div class="box">
+          <h3>Дополнительные ссылки</h3>
+          <a href="#"><i class="fas fa-arrow-right"></i> мой заказ </a>
+          <a href="#"><i class="fas fa-arrow-right"></i> мой аккаунт </a>
+          <a href="#"
+            ><i class="fas fa-arrow-right"></i> условия эксплуатации</a
+          >
+        </div>
+        <div class="box">
+          <h3>Подписывайтесь на нас</h3>
+          <a href="#"><i class="fab fa-facebook"></i>facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+        </div>
+        <div class="box">
+          <h3>Информационная бюллетень</h3>
+          <p>Последние издания</p>
+          <form action="">
+            <input type="email" placeholder="введите свой email" />
+            <input type="submit" value="опубликовать" class="btn" />
+          </form>
+          <div class="payment">
+            <a href="#"><i class="fab fa-cc-visa"></i></a>
+            <a href="#"><i class="fab fa-cc-mastercard"></i></a>
+            <a href="#"><i class="fab fa-cc-paypal"></i></a>
+            <a href="#"><i class="fab fa-cc-amazon-pay"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- секция футер конец -->
+
+    <!-- подключение файла js для слайдера swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-    
-
-    
-<!-- custom css file link  -->
-<script src="js/script.js"></script>
-
-</body>
+    <script src="js/script-shop.js"></script>
+  </body>
 </html>

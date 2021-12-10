@@ -1,38 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>shop</title>
+    <!-- подключение файла стилей слайдера swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- подключение файла стилей css  -->
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
-    
 
+    <!-- секция шапка начало  -->
+    <header class="header">
+        <a href="home.html" class="logo"><i class="fas fa-bed"></i>Будуар</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Главная</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="review.html">Отзывы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
 
+        <!-- форма для поиска -->
+        <form action="" class="search-form">
+            <input id="search-box" type="search" placeholder="поиск товара..." />
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <!-- форма корзины -->
+        <div class="shopping-cart">
+            <div class="box">
+                <div class="image">
+                    <img class="image" src="./my-img/shopping-cart/furniture-set.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <h3>мебельный гарнитур</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">4500 руб.</span>
+                </div>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img class="image" src="./my-img/shopping-cart/chair.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <h3>Стул</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">4500 руб.</span>
+                </div>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img class="image" src="./my-img/shopping-cart/sofa.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <h3>диван</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">4500 руб.</span>
+                </div>
+                <i class="fas fa-times"></i>
+            </div>
+            <h3 class="total">итого : <span>56.97 руб.</span></h3>
+            <a href="#" class="btn">оплатить товар</a>
+        </div>
+        <!-- форма авторизации -->
+        <form action="" class="login-form">
+            <h3>Авторизация клиента</h3>
+            <input type="email" placeholder="Введите свой email" class="box" />
+            <input type="password" placeholder="Введите свой пароль" class="box" />
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me" />
+                <label for="remember-me">запомнить данные</label>
+            </div>
+            <input type="submit" value="авторизация" class="btn" />
+            <p>забыли пароль? <a href="#">кликните здесь</a></p>
+            <p>
+                еще не зарегистрированы <button id="login">кликните здесь</button>
+            </p>
+        </form>
+    </header>
+    <!-- секция шапка конец -->
+    <!-- секция home начало -->
+    <div class="home-section" style="background-image: url(./my-img/about/about-us.jpg);">
+        <div class="darken"></div>
+        <div class="content">
+            <h1>о нас</h1>
+            <p> <a href="#">Главная <span><i class="fas fa-arrow-right"></i></span></a> о нас</p>
+        </div>
+    </div>
+    <!-- секция home конец -->
 
+    <!-- секция о нас начало -->
+    <section class="about-shop">
+        <h2><span>О фабрике </span>«Будуар»</h2>
+        <p>В 2000 году мы основали фабрику мебели и назвали ее «Будуар». Название было выбрано не случайно в него
+            заложили основы, по которым компания работает и по сей день.</p>
+        <p>За длительный период существования, организация накопила большой опыт в производстве добротной мебели.
+            Изначально основным продуктом производства были корпусная и кухонная мебель.</p>
+        <div class="image" style="background-image: url(./my-img/about/about-shop.jpg);">
+            <div class="gradient"></div>
+            <div class="content">
+                <p>Недорогая качественная мебель в каждый дом.</p>
+                <p>Максимально возможный выбор цветов и размеров изделий.</p>
+                <p>А самое главное - это клиентоориентированный подход.</p>
+            </div>
+        </div>
+        <p>Начиная с 2002 года, компания претерпела большие перемены. Было полностью модернизировано оборудование,
+            увеличились производственные площади, запущена новая линия ламинирования древесно-стружечных плит,
+            составляющих основу для выпускаемой продукции. Проводятся мероприятия по автоматизации производства,
+            решаются вопросы улучшения качества материалов и комплектующих.</p>
+        <p>И сегодня мы являемся динамично развивающемся предприятием, выпускающим постоянно расширяемый ассортимент
+            всех видов корпусной мебели, и увеличиваем линейку цветов и фурнитуры, которые используются в изготовлении
+            нашей продукции. Контроль, осуществляемый на всех этапах производственного цикла, позволяет изготовлять
+            продукцию, отвечающую высоким современным требованиям.</p>
+        <p>Отличное качество, безупречный дизайн и демократичные цены – вот что отличает нашу мебель. Высокий
+            профессионализм работников фабрики позволяет изготавливать красивую и качественную мебель по невысокой
+            стоимости и в самые короткие сроки.</p>
+        <p>Мы исключили посредников, создав фирменный интернет-магазин, и постоянно занимаемся расширением ассортимента
+            корпусной мебели от производителя, которая создает уют и комфорт в вашем доме.</p>
+        <div class="video-clip">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/cJPdaKmAMYI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="history">
+            <h2>История создания и развития фабрики</h2>
+            <div class="content">
+                <div class="title">
+                    <span>2000-2005 г.</span>
+                </div>
+                <div class="text">
+                    <p>Фабрика мебели основана в 2000 году, основным видом деятельности было производство корпусной
+                        мебели для дома и офиса, кухонь. В 2002 году мы провели модернизацию производства, установив
+                        высокоточные станки немецкого и итальянского производства. В этом же году купили собственные
+                        площади для мебельного цеха. В 2003 году линейка выпускаемой продукции расширилась до 200
+                        наименований, это потребовало расширения площадей, поэтому мы купили еще один цех.</p>
+                </div>
+                <div class="title">
+                    <span>2005 г.</span>
+                </div>
+                <div class="text">
+                    <p>В 2005 году мы продолжали развивать фабрику Будуар – был куплен третий цех. Для улучшения
+                        характеристик выпускаемой продукции на предприятии внедрили систему внутреннего контроля
+                        качества, благодаря чему количество брака свелось к минимуму. Количество сотрудников на фабрике
+                        достигло 60 человек.</p>
+                </div>
+                <div class="title">
+                    <span>2006 г.</span>
+                </div>
+                <div class="text">
+                    <p>В 2006 году запустили собственную линию по ламинированию древесно-стружечных плит. Это позволило
+                        сократить затраты на приобретение материалов и снизить цену на продукцию. В 2007 году фабрика
+                        Будуар приняла участие в выставке «Экспоцентр 2008». В 2008 году компания участвовала в выставке
+                        Корпус сити. Количество моделей, производимых на фабрике достигло 600 позиций. В этом же году мы
+                        начали первые продажи через интернет, организовали сотрудничество с интернет-магазином.</p>
+                </div>
+                <div class="title">
+                    <span>2021 г.</span>
+                </div>
+                <div class="text">
+                    <p>В 2021 году был модернизирован конфигуратор мебели на сайте и теперь нашим клиентам доступна
+                        3D-визуализация моделей. Помимо этого, мы продолжаем наращивать темп работы и разрабатываем
+                        новые модели, число которых составляет более 35000 позиций. В начале года была запущена доставка
+                        мебели нашего производства в г. Ярославль и Калуга. Но мы не остановились на достигнутом и
+                        осенью 2021 года мы запустили доставку мягкой и корпусной мебели по всей России.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- секция о нас конец -->
+    <!-- секция наши достижения начало -->
+    <section class="our-achievements">
+        <h3 class="heading">Наши достижения</h3>
+        <div class="box-container">
+            <div class="box">
+                <div class="image-content">
+                    <div class="bg-hover"></div>
+                    <div class="image">
+                        <img src="./my-img/about/our-achievements-1.png" alt="our-achievements-1">
+                    </div>
+                    <div class="text">20 лет на рынке</div>
+                </div>
+                <div class="content">
+                    <p>20 лет мы производим качественную и недорогую мебель. Только за последние 1,5 года мы обеспечили
+                        хорошей мебелью население небольшого города. За это время множество людей стали нашими постоянными
+                        клиентами и продолжают покупать нашу продукцию.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image-content">
+                    <div class="bg-hover"></div>
+                    <div class="image">
+                        <img src="./my-img/about/our-achievements-2.png" alt="our-achievements-2">
+                    </div>
+                    <div class="text">Качество</div>
+                </div>
+                <div class="content">
+                    <p>За последний год объемы производства выросли в три раза. Продолжает повышаться качество мебели, брак
+                        постепенно стал нонсенсом, и шанс встретить бракованное изделие исчезающе мал. Процент бракованных
+                        изделий на текущий момент составляет не более 2.7% и продолжает уменьшаться.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image-content">
+                    <div class="bg-hover"></div>
+                    <div class="image">
+                        <img src="./my-img/about/our-achievements-3.png" alt="our-achievements-3">
+                    </div>
+                    <div class="text">Огромный ассортимент</div>
+                </div>
+                <div class="content">
+                    <p>Мы расширяем модельный ряд мебели, увеличиваем выбор фурнитуры для наших изделий и расширяем
+                        дополнительный ассортимент сопутствующих товаров, мы стремимся, чтобы любой покупатель смог
+                        подобрать мебель и аксессуары к ней по своему вкусу.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image-content">
+                    <div class="bg-hover"></div>
+                    <div class="image">
+                        <img src="./my-img/about/our-achievements-4.png" alt="our-achievements-4">
+                    </div>
+                    <div class="text">Низкие цены</div>
+                </div>
+                <div class="content">
+                    <p>За счет внедрения автоматизации производственных процессов и использования инновационных технологий и
+                        оборудования, себестоимость продукции постоянно уменьшается, поэтому мы можем снижать цены для наших
+                        клиентов.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image-content">
+                    <div class="bg-hover"></div>
+                    <div class="image">
+                        <img src="./my-img/about/our-achievements-5.png" alt="our-achievements-5">
+                    </div>
+                    <div class="text">Быстрое выполнение заказа</div>
+                </div>
+                <div class="content">
+                    <p>Сейчас компания движется в направлении полной локализации производства мебельных комплектующих.
+                        Помимо этого, работают три отдельные производственные линии, чтобы Вы могли приобрести себе
+                        качественную и недорогую мебель в кратчайшие сроки.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image-content">
+                    <div class="bg-hover"></div>
+                    <div class="image">
+                        <img src="./my-img/about/our-achievements-6.png" alt="our-achievements-6">
+                    </div>
+                    <div class="text">Квалифицированный персонал</div>
+                </div>
+                <div class="content">
+                    <p>У нас работают профессионалы – многие сотрудники более 10 лет трудятся на мебельном производстве. Все
+                        работники предприятия постоянно повышают свою квалификацию, регулярно проходят обучение, чтобы
+                        качество нашей мебели становилось еще выше.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- секция наши достижения конец -->
 
+    <!-- секция наша цель начало -->
+    <section class="our-mission">
+        <div class="image" style="background-image: url(./my-img/about/our-mission.jpg);">
+            <div class="gradient"></div>
+            <div class="content">
+                <span>
+                    наша миссия
+                </span>
+                <p>Недорогая качественная мебель в каждый дом.</p>
+            </div>
+        </div>
+    </section>
+    <!-- секция наша цель конец -->
 
+    <!-- секция футер начало -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Быстрые ссылки</h3>
+                <a href="home.html"><i class="fas fa-arrow-right"></i> Главная</a>
+                <a href="shop.html"><i class="fas fa-arrow-right"></i> Магазин</a>
+                <a href="about.html"><i class="fas fa-arrow-right"></i> О нас</a>
+                <a href="review.html"><i class="fas fa-arrow-right"></i> Отзывы</a>
+                <a href="blog.html"><i class="fas fa-arrow-right"></i> Блог</a>
+                <a href="contact.html"><i class="fas fa-arrow-right"></i> Контакты</a>
+            </div>
+            <div class="box">
+                <h3>Дополнительные ссылки</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i> мой заказ </a>
+                <a href="#"><i class="fas fa-arrow-right"></i> мой аккаунт </a>
+                <a href="#"><i class="fas fa-arrow-right"></i> условия эксплуатации</a>
+            </div>
+            <div class="box">
+                <h3>Подписывайтесь на нас</h3>
+                <a href="#"><i class="fab fa-facebook"></i>facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            </div>
+            <div class="box">
+                <h3>Информационная бюллетень</h3>
+                <p>Последние издания</p>
+                <form action="">
+                    <input type="email" placeholder="введите свой email" />
+                    <input type="submit" value="опубликовать" class="btn" />
+                </form>
+                <div class="payment">
+                    <a href="#"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#"><i class="fab fa-cc-amazon-pay"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- секция футер конец -->
 
-
-
-
-
-
-
-
-
-
-
-<!-- custom css file link  -->
-<script src="js/script.js"></script>
+    <!-- подключение файла js для слайдера swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- custom css file link  -->
+    <script src="js/script-about.js"></script>
 
 </body>
+
 </html>
+

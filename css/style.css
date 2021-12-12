@@ -452,6 +452,7 @@ section {
           justify-content: space-between;
   padding: 2rem 9%;
   width: 100%;
+  overflow: hidden;
 }
 
 .header .logo {

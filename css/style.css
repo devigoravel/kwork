@@ -434,7 +434,7 @@ section {
 
 .header {
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -452,7 +452,7 @@ section {
           justify-content: space-between;
   padding: 2rem 9%;
   width: 100%;
-  overflow: hidden;
+  
 }
 
 .header .logo {
